@@ -1,0 +1,102 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background-color: #00ffff;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+/* Menu */
+nav ul.menu1 {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul.menu1 li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul.menu1 li a:hover {
+    text-decoration: underline;
+}
+
+/* Menu hamburger (mobile) */
+.menu1-toggle {
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Contenu */
+main .content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Pied de page */
+footer {
+    background-color: #00ffff;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu1-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        background-color: #00ffff;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul.menu1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav ul.menu1 li {
+        margin: 10px 0;
+    }
+}

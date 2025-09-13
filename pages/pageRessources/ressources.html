@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonSite Moderne</title>
+    <link rel="stylesheet" href="../../css/themeGlass/styleGlass.css">
+    <link rel="icon" href="../../images/siteIcon.ico" type="image/x-icon">
+</head>
+<body>
+    <header id="main-header">
+        <div class="main-menu">
+            <h1 class="logo floating">Ressources</h1>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <nav id="nav">
+                <ul class="menu1">
+                    <li><a href="../pagePrincipal/indexB.html"> Accueil</a></li>
+                    <li><a href="../pagePortfolio/portfolio.html">Portfolio</a></li>
+                    <li><a href="#">📧 Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="glass-cards">
+            <div class="glass-card">
+                <h2>Bienvenue</h2>
+                <p>Découvrez mon site web moderne avec des effets de glassmorphism et une interface responsive. Explorez mes projets, ressources et n'hésitez pas à me contacter pour vos besoins créatifs.</p>
+            </div>
+            <div class="glass-card">
+                <h2>Design Moderne</h2>
+                <p>Interface utilisant les dernières tendances en matière de design web : glassmorphism, animations fluides, et expérience utilisateur optimisée pour tous les appareils.</p>
+            </div>
+        </div>
+
+        <div class="apps-section">
+            <h2 style="color: white; text-align: center; margin-bottom: 10px;">Applications & Outils</h2>
+            <div class="apps-grid">
+                <div class="app-item" onclick="openApp('portfolio')">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">🎨</div>
+                    <div class="app-name">Portfolio</div>
+                </div>
+                <div class="app-item" onclick="openApp('resources')">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #54a0ff, #2e86de);">📚</div>
+                    <div class="app-name">Ressources</div>
+                </div>
+                <div class="app-item" onclick="openApp('contact')">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #5f27cd, #341f97);">📧</div>
+                    <div class="app-name">Contact</div>
+                </div>
+                <div class="app-item" onclick="openApp('blog')">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #00d2d3, #54a0ff);">📝</div>
+                    <div class="app-name">Blog</div>
+                </div>
+                <div class="app-item" onclick="openApp('gallery')">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #feca57, #ff9ff3);">🖼️</div>
+                    <div class="app-name">Galerie</div>
+                </div>
+                <div class="app-item" onclick="openApp('tools')">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #48dbfb, #0abde3);">🛠️</div>
+                    <div class="app-name">Outils</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <button class="control-btn" onclick="toggleBlur()">🔄 Dynamic Blur</button>
+            <button class="control-btn" onclick="changeTheme('acrylic')">🎭 Acrylic</button>
+            <button class="control-btn active" onclick="changeTheme('glass')">✨ Glass</button>
+            <button class="control-btn" onclick="changeTheme('transparent')">👻 Transparent</button>
+            <button class="control-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Mon Site Web Moderne | Design Glassmorphism</p>
+    </footer>
+
+    <script src="../../javascript/script.js"></script>
+</body>
+</html>
