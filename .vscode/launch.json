@@ -8,8 +8,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "/home/amdas/Projets/HTML/sitePerso/pages/pagePrincipal/index.html"
+            "name": "Open indexB.html",
+            "file": "/home/amdas/Projets/HTML/sitePerso/pages/pagePrincipal/indexB.html"
         }
     ]
 }

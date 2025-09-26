@@ -4,21 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonSite Moderne</title>
-    <link rel="stylesheet" href="../../css/themeGlass/styleGlass.css">
+    <link rel="stylesheet" href="../../css/themePrincipal/stylePrincipal.css">
     <link rel="icon" href="../../images/siteIcon.ico" type="image/x-icon">
 </head>
 <body>
     <header id="main-header">
         <div class="main-menu">
             <h1 class="logo floating">Accueil</h1>
+
+            <!-- Horloge centrale -->
+            <div class="clock-section">
+                <div class="clock" id="clock">11:00:16</div>
+                <div class="date" id="date">vendredi 26 septembre 2025</div>
+            </div>
+
             <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
             <nav id="nav">
                 <ul class="menu1">
                     <li><a href="../pagePortfolio/portfolio.html">Portfolio</a></li>
                     <li><a href="../pageRessources/ressources.html">Ressources</a></li>
                     <li><a href="#">📧 Contact</a></li>
+                    <!-- Menu des Thèmes -->
+                    <li><a class="theme-toggle" id="theme-toggle">Thèmes</a></li>
+                    <!--<button class="theme-toggle" id="theme-toggle"> Thèmes</button> -->
+                    <!-- Menu latéral des thèmes -->
+                    <div id="theme-menu" class="theme-menu">
+                        <h3>Choisir un thème</h3>
+                        <button class="control-btn" onclick="toggleBlur()">🔄 Dynamic Blur</button>
+                        <button onclick="changeTheme('glass')">✨ Glass</button>
+                        <button onclick="changeTheme('acrylic')">🎭 Acrylic</button>
+                        <button onclick="changeTheme('transparent')">👻 Transparent</button>
+                        <button onclick="toggleDarkMode()">🌙 Mode sombre</button>
+                    </div>
                 </ul>
             </nav>
+
+            
+            
         </div>
     </header>
 
@@ -64,13 +87,13 @@
             </div>
         </div>
 
-        <div class="controls-section">
+        <!-- <div class="controls-section">
             <button class="control-btn" onclick="toggleBlur()">🔄 Dynamic Blur</button>
             <button class="control-btn" onclick="changeTheme('acrylic')">🎭 Acrylic</button>
             <button class="control-btn active" onclick="changeTheme('glass')">✨ Glass</button>
             <button class="control-btn" onclick="changeTheme('transparent')">👻 Transparent</button>
             <button class="control-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
-        </div>
+        </div> -->
     </main>
 
     <footer>

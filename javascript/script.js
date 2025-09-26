@@ -11,6 +11,52 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeEventListeners();
 });
 
+// Gestion de l'horloge
+function updateClock() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString('fr-FR');
+    const dateString = now.toLocaleDateString('fr-FR', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    
+    document.getElementById('clock').textContent = timeString;
+    document.getElementById('date').textContent = dateString;
+}
+
+// Mettre à jour l'horloge toutes les secondes
+setInterval(updateClock, 1000);
+updateClock(); // Initialiser immédiatement
+
+// Gestion du dashboard
+const menuToggle = document.getElementById('menu-toggle');
+const dashboard = document.getElementById('dashboard');
+const closeDashboard = document.getElementById('close-dashboard');
+
+menuToggle.addEventListener('click', () => {
+    dashboard.classList.add('active');
+});
+
+closeDashboard.addEventListener('click', () => {
+    dashboard.classList.remove('active');
+});
+
+// Fermer en cliquant en dehors
+dashboard.addEventListener('click', (e) => {
+    if (e.target === dashboard) {
+        dashboard.classList.remove('active');
+    }
+});
+
+// Fermer avec Échap
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        dashboard.classList.remove('active');
+    }
+});
+
 // Gestion du menu mobile
 function initializeEventListeners() {
     // Menu toggle
@@ -76,6 +122,16 @@ function showNotification(message) {
     }, 3000);
 }
 
+// Gestion du menu de thème
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeMenu = document.getElementById("theme-menu");
+
+    themeToggle.addEventListener("click", () => {
+        themeMenu.classList.toggle("active");
+    });
+});
+
 // Contrôles de thème
 function toggleBlur() {
     blurEnabled = !blurEnabled;
@@ -119,13 +175,13 @@ function changeTheme(theme) {
             });
             break;
     }
-    showNotification(`Thème ${theme} appliqué`);
+    //showNotification(`Thème ${theme} appliqué`);
 }
 
 function toggleDarkMode() {
     isDarkMode = !isDarkMode;
     document.body.classList.toggle('dark-mode', isDarkMode);
-    showNotification(`Mode ${isDarkMode ? 'sombre' : 'clair'} activé`);
+    //showNotification(`Mode ${isDarkMode ? 'sombre' : 'clair'} activé`);
 }
 
 // Animations au scroll
