@@ -252,3 +252,28 @@ window.removeEventListener('scroll', handleScroll);
 window.removeEventListener('mousemove', handleMouseMove);
 window.addEventListener('scroll', debouncedScroll);
 window.addEventListener('mousemove', debouncedMouseMove);
+
+// Gestion des sous-menus
+function toggleSousMenu(menuId) {
+    const menu = document.getElementById(menuId);
+    const allMenus = document.querySelectorAll('.sous-menu');
+    
+    // Ferme tous les autres menus
+    allMenus.forEach(m => {
+        if (m.id !== menuId) {
+            m.classList.remove('active');
+        }
+    });
+    
+    // Toggle le menu actuel
+    menu.classList.toggle('active');
+}
+
+// Ferme les menus si on clique en dehors
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.nav-buttons')) {
+        document.querySelectorAll('.sous-menu').forEach(menu => {
+            menu.classList.remove('active');
+        });
+    }
+});

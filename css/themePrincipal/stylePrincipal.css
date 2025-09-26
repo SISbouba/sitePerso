@@ -18,7 +18,7 @@ body {
 }
 
 /* Arrière-plan animé */
-body::before {
+/*body::before {
     content: '';
     position: fixed;
     top: 0;
@@ -29,6 +29,7 @@ body::before {
     pointer-events: none;
     z-index: -1;
 }
+ */
 
 /* Header glassmorphism */
 header {
@@ -99,7 +100,7 @@ header:hover {
 }
 
 .theme-menu.active {
-    right: 0; /* visible quand actif */
+    right: 1; /* visible quand actif */
 }
 
 .theme-menu h3 {
@@ -379,6 +380,17 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         gap: 15px;
     }
+
+    .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sous-menu {
+        position: static;
+        width: 100%;
+        margin-top: 5px;
+    }
 }
 
 /* Dark mode */
@@ -419,4 +431,68 @@ footer {
 @keyframes slideOut {
     from { transform: translateX(0); opacity: 1; }
     to { transform: translateX(100%); opacity: 0; }
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+
+.nav-toggle, .theme-toggle {
+    color: white;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle:hover, .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(31, 38, 135, 0.2);
+}
+
+.sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    min-width: 200px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    z-index: 1000;
+}
+
+.sous-menu.active {
+    display: block;
+}
+
+.sous-menu li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.sous-menu button, .sous-menu a {
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.sous-menu button:hover, .sous-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
 }
