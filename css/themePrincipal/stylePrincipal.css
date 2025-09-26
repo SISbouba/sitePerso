@@ -309,6 +309,34 @@ footer {
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* Clock section */
+.clock-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.clock-section:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(31, 38, 135, 0.2);
+}
+
+.clock {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.date {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .menu-toggle {
