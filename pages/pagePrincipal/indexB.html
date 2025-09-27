@@ -10,7 +10,7 @@
 <body>
     <header id="main-header">
         <div class="main-menu">
-            <h1 class="logo floating">Accueil</h1>
+            <h1 class="logo-name">Accueil</h1>
             
             <div class="clock-section">
                 <div class="clock" id="clock"></div>
@@ -19,24 +19,29 @@
 
             <nav class="nav-buttons">
                 <button onclick="toggleSousMenu('nav-sous-menu')" class="nav-toggle">&#9776;</button>
-                <ul class="sous-menu" id="nav-sous-menu">
-                    <li><a href="../pagePortfolio/portfolio.html">Portfolio</a></li>
-                    <li><a href="../pageRessources/ressources.html">Ressources</a></li>
-                    <li><a href="#">📧 Contact</a></li>
-                </ul>
-
                 <button onclick="toggleSousMenu('theme-sous-menu')" class="theme-toggle">&#9788;</button>
-                <ul class="sous-menu" id="theme-sous-menu">
-                    <li><button onclick="toggleBlur()">🔄 Dynamic Blur</button></li>
-                    <li><button onclick="changeTheme('glass')">✨ Glass</button></li>
-                    <li><button onclick="changeTheme('acrylic')">🎭 Acrylic</button></li>
-                    <li><button onclick="changeTheme('transparent')">👻 Transparent</button></li>
-                    <li><button onclick="toggleDarkMode()">🌙 Mode sombre</button></li>
-                </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Sous-menus -->
+    <div class="sous-menu" id="nav-sous-menu">
+        <ul>
+            <li><a href="../pagePortfolio/portfolio.html">Portfolio</a></li>
+            <li><a href="../pageRessources/ressources.html">Ressources</a></li>
+            <li><a href="#">📧 Contact</a></li>
+        </ul>
+    </div>
+    
+    <div class="sous-menu" id="theme-sous-menu">
+        <ul>
+            <li><button onclick="toggleBlur()">🔄 Dynamic Blur</button></li>
+            <li><button onclick="changeTheme('glass')">✨ Glass</button></li>
+            <li><button onclick="changeTheme('acrylic')">🎭 Acrylic</button></li>
+            <li><button onclick="changeTheme('transparent')">👻 Transparent</button></li>
+            <li><button onclick="toggleDarkMode()">🌙 Mode sombre</button></li>
+        </ul>
+    </div>  
     <main>
         <!--<div class="glass-cards">
             <div class="glass-card">

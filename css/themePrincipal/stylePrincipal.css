@@ -55,6 +55,8 @@ header:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
 
 .logo {
@@ -320,6 +322,8 @@ footer {
     color: white;
     text-align: center;
     transition: all 0.3s ease;
+    flex: 0 1 auto;
+    min-width: 150px;
 }
 
 .clock-section:hover {
@@ -341,7 +345,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: flex;
     }
 
     nav {
@@ -387,9 +391,59 @@ footer {
     }
 
     .sous-menu {
-        position: static;
-        width: 100%;
-        margin-top: 5px;
+        position: fixed;
+        left: 20px;
+        right: 20px;
+        margin-top: 15px;
+    }
+
+    .main-menu {
+        gap: 5px;
+    }
+
+    .logo-name {
+        font-size: 1.2rem;
+    }
+
+    .clock-section {
+        min-width: auto;
+        padding: 8px 12px;
+    }
+
+    .clock {
+        font-size: 0.9rem;
+    }
+
+    .date {
+        font-size: 0.7rem;
+    }
+
+    .nav-buttons {
+        gap: 5px;
+    }
+
+    .nav-toggle, .theme-toggle {
+        min-width: 38px;
+        height: 38px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo-name {
+        font-size: 1rem;
+    }
+
+    .clock-section {
+        padding: 6px 10px;
+    }
+
+    .date {
+        display: none;
     }
 }
 
@@ -419,8 +473,9 @@ footer {
     50% { transform: translateY(-10px); }
 }
 
-.floating {
-    animation: float 6s ease-in-out infinite;
+.logo-name {
+    /*animation: float 6s ease-in-out infinite;*/
+    color: #ffffff;
 }
 
 @keyframes slideIn {
@@ -458,16 +513,16 @@ footer {
 
 .sous-menu {
     display: none;
-    position: absolute;
-    top: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
-    border-radius: 15px;
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.075);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    min-width: 200px;
+    padding: 15px;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
-    z-index: 1000;
+    z-index: 999;
 }
 
 .sous-menu.active {
