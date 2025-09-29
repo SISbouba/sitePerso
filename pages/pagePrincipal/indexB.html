@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonSite Moderne</title>
-    <link rel="stylesheet" href="../../css/themePrincipal/stylePrincipal.css">
+    <link rel="stylesheet" href="../../css/TRANSLUCENT/stylePrincipal.css">
     <link rel="icon" href="../../images/siteIcon.ico" type="image/x-icon">
 </head>
 <body>
+
+    <!-- Barre de navigation principal -->
     <header id="main-header">
         <div class="main-menu">
             <h1 class="logo-name">Accueil</h1>
@@ -33,6 +35,34 @@
         </ul>
     </div>
     
+    <section id="theme-contenu" class="mega-menu">
+         <div><h3>Changer de thème</h3></div>
+         <section id="theme-selector">
+            <article class="theme-type">
+                <article>
+                    <h4>OPAQUE</h4>
+                    <div class="theme" onclick="changeTheme('CSS/Glass/glass.css')">Glass</div>
+                    <div class="theme" onclick="changeTheme('CSS/Glass/rose.css')">Rose</div>
+                    <div class="theme" onclick="changeTheme('CSS/Glass/bleu.css')">Bleu</div>
+                    <div class="theme" onclick="changeTheme('CSS/Glass/vert.css')">Vert</div>
+                </article>
+                <article>
+                    <h4>TRANSLUCENT</h4>
+                    <div class="theme" onclick="changeTheme('CSS/Acrylic/acrylic.css')">Acrylic</div>
+                    <div class="theme" onclick="changeTheme('CSS/Acrylic/rose.css')">Rose</div>
+                    <div class="theme" onclick="changeTheme('CSS/Acrylic/bleu.css')">Bleu</div>
+                    <div class="theme" onclick="changeTheme('CSS/Acrylic/vert.css')">Vert</div>
+                </article>
+                <article>
+                    <h4>AMOLED</h4>
+                    <div class="theme" onclick="changeTheme('CSS/AMOLED/AMOLED.css')">AMOLED</div>
+                    <div class="theme" onclick="changeTheme('CSS/AMOLED/violet.css')">Violet</div>
+                    <div class="theme" onclick="changeTheme('CSS/AMOLED/vert.css')">Vert</div>
+                    <div class="theme" onclick="changeTheme('CSS/AMOLED/bleu.css')">Bleu</div>
+                </article>    
+            </article>
+         </section>
+    </section>
     <div class="sous-menu" id="theme-sous-menu">
         <ul>
             <li><button onclick="toggleBlur()">🔄 Dynamic Blur</button></li>
@@ -94,9 +124,13 @@
     </main>
 
     <footer>
+        <section>
+            <h3>Mon répo Github</h3>
+            <a href="https://github.com/SISbouba/sitePerso" target="_blank" itle="Lien vers le repo GitHub"><img src="/images/GitHub.svg" alt="GitHub" id="GitHub" style="height: 100px; width: 100px;"></a>
+        </section>
         <p>&copy; 2025 - Mon Site Web Moderne | Design Glassmorphism</p>
     </footer>
 
     <script src="../../javascript/script.js"></script>
 </body>
-</html>
+</html
