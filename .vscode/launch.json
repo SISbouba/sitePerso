@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open indexB.html",
-            "file": "/home/amdas/Projets/HTML/sitePerso/pages/pagePrincipal/indexB.html"
+            "file": "/home/amdas/dossierUniv/HTML/sitePerso/pages/pagePrincipal/indexB.html"
         }
     ]
 }

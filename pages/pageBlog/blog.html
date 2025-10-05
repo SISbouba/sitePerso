@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - MonSite Moderne</title>
+    <link rel="stylesheet" href="../../css/themePrincipal/stylePrincipal.css">
+    <link rel="icon" href="../../images/siteIcon.ico" type="image/x-icon">
+</head>
+<body>
+    <header id="main-header">
+        <div class="main-menu">
+            <h1 class="logo-name">Accueil</h1>
+            
+            <div class="clock-section">
+                <div class="clock" id="clock"></div>
+                <div class="date" id="date"></div>
+            </div>
+
+            <nav class="nav-buttons">
+                <button onclick="toggleSousMenu('nav-sous-menu')" class="nav-toggle">&#9776;</button>
+                <button onclick="toggleSousMenu('theme-sous-menu')" class="theme-toggle">&#9788;</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sous-menus -->
+    <div class="sous-menu" id="nav-sous-menu">
+        <div><h4>Navigation</h4></div>
+        <div>
+            <ul>
+                <li><a href="../pagePortfolio/portfolio.html">Portfolio</a></li>
+                <li><a href="../pageBlog/blog.html">Blog</a></li>
+                <li><a href="../pageProjets/projets.html">Mes Projets</a></li>
+                <li><a href="#">📧 Contact</a></li>
+                <li><a href="../pageRessources/ressources.html">Ressources</a></li>
+                <li><a href="../pageGalerie/galerie.html">Galerie</a></li>
+                <li><a href="../pageOutils/outils.html">Outils</a></li>
+            </ul>
+        </div>
+    </div>>
+
+    <main>
+        <div class="glass-card">
+            <h2>Mon Blog</h2>
+            <p>Bienvenue sur mon blog. Ici, je partage mes pensées, idées et expériences sur divers sujets liés à la technologie, au développement web et plus encore.</p>
+            <ul>
+                <li><strong>Article 1 :</strong> Introduction au développement web moderne.</li>
+                <li><strong>Article 2 :</strong> Les meilleures pratiques en matière de design UX/UI.</li>
+                <li><strong>Article 3 :</strong> Comment rester à jour avec les dernières technologies.</li>
+            </ul>
+            <p>N'hésitez pas à laisser vos commentaires et à partager vos propres expériences !</p>
+        </div>
+    </main>
+</body>
+</html>

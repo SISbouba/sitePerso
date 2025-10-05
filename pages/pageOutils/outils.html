@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outils - MonSite Moderne</title>
+    <link rel="stylesheet" href="../../css/themePrincipal/stylePrincipal.css">
+    <link rel="icon" href="../../images/siteIcon.ico" type="image/x-icon">
+</head>
+<body>
+    <header id="main-header">
+        <div class="main-menu">
+            <h1 class="logo-name">Accueil</h1>
+            
+            <div class="clock-section">
+                <div class="clock" id="clock"></div>
+                <div class="date" id="date"></div>
+            </div>
+
+            <nav class="nav-buttons">
+                <button onclick="toggleSousMenu('nav-sous-menu')" class="nav-toggle">&#9776;</button>
+                <button onclick="toggleSousMenu('theme-sous-menu')" class="theme-toggle">&#9788;</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sous-menus -->
+    <div class="sous-menu" id="nav-sous-menu">
+        <div><h4>Navigation</h4></div>
+        <div>
+            <ul>
+                <li><a href="../pagePortfolio/portfolio.html">Portfolio</a></li>
+                <li><a href="../pageBlog/blog.html">Blog</a></li>
+                <li><a href="../pageProjets/projets.html">Mes Projets</a></li>
+                <li><a href="#">📧 Contact</a></li>
+                <li><a href="../pageRessources/ressources.html">Ressources</a></li>
+                <li><a href="../pageGalerie/galerie.html">Galerie</a></li>
+                <li><a href="../pageOutils/outils.html">Outils</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <div class="glass-card">
+            <h2>Mes Outils</h2>
+            <p>Bienvenue sur la page des outils. Ici, vous trouverez une liste d'outils que j'utilise régulièrement pour le développement web, la gestion de projets et plus encore.</p>
+            <ul>
+                <li><strong>Outil 1 :</strong> Description de l'outil 1.</li>
+                <li><strong>Outil 2 :</strong> Description de l'outil 2.</li>
+                <li><strong>Outil 3 :</strong> Description de l'outil 3.</li>
+            </ul>
+            <p>N'hésitez pas à me contacter si vous souhaitez en savoir plus sur ces outils ou si vous avez des recommandations à partager !</p>
+        </div>
+    </main>
+</body>
+</html>
