@@ -1,0 +1,25 @@
+@import url('../variables.css');
+
+/* Styles spécifiques au thème Gold */
+.theme-gold {
+    background-color: #000000;
+    background-image: linear-gradient(45deg, #000000, #2c2c2c);
+}
+
+.theme-gold header,
+.theme-gold .element-card,
+.theme-gold .sous-menu {
+    background: var(--background-color);
+    backdrop-filter: blur(var(--blur-intensity));
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.theme-gold .nav-toggle,
+.theme-gold .theme-toggle {
+    background: var(--background-color);
+    color: var(--accent-color);
+    border-color: var(--border-color);
+}
+
+/* Autres styles spécifiques au thème Gold */

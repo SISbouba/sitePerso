@@ -1,0 +1,24 @@
+:root {
+    --background-color: rgba(255, 255, 255, 0.1);
+    --text-color: #FFFFFF;
+    --link-color: #0000EE;
+    --button-background: rgba(255, 255, 255, 0.1);
+    --button-text: #FFFFFF;
+    --button-hover-background: rgba(255, 255, 255, 0.2);
+    --border-color: rgba(255, 255, 255, 0.3);
+    --highlight-color: #FF4500;
+    /*--bg-image-primary: url("../../images/imageWindowsLonghorn.jpg");*/
+    --background-opacity: 0.1;
+    --blur-intensity: 30px;
+    --acrylic-border: 1px solid rgba(255, 255, 255, 0.1);
+    --acrylic-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+}
+
+@import url('../stylePrincipal.css');
+
+.theme-acrylic {
+    --background: rgba(255, 255, 255, 0.08);
+    --element-background: rgba(255, 255, 255, 0.12);
+    --text-color: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.15);
+}

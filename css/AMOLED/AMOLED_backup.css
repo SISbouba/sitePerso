@@ -1,0 +1,62 @@
+@import url('../variables.css');
+
+:root {
+    --background: #000000;
+    --text: #FFFFFF;
+    --header-background: #111;
+    --header-text: #fff;
+    --element-background: #111;
+    --element-text: #fff;
+    --element-hover-background: #222;
+    --element-active-background: #818181;
+    --link-color: #0000EE;
+    --button-background: #1E1E1E;
+    --button-text: #FFFFFF;
+    --button-hover-background: #333333;
+    --border-color: #444444;
+    --highlight-color: #FF4500;
+    --scrollbar-track: #000000;
+    --scrollbar-thumb: #020202;
+    /*--bg-image-primary: url("../../images/imageWindowsLonghorn.jpg");*/
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header {
+    background-color: var(--header-background);
+    color: var(--header-text);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles spécifiques au thème AMOLED */
+.theme-amoled {
+    background-color: #000000;
+}
+
+.theme-amoled header,
+.theme-amoled .element-card,
+.theme-amoled .sous-menu {
+    background: var(--background-color);
+    backdrop-filter: blur(var(--blur-intensity));
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.theme-amoled .nav-toggle,
+.theme-amoled .theme-toggle {
+    background: var(--background-color);
+    color: var(--accent-color);
+    border-color: var(--border-color);
+}
+
+/* ...existing code with similar pattern for other elements... */

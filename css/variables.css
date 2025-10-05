@@ -1,0 +1,25 @@
+:root {
+    /* Variables de base */
+    --background-opacity: 0.15;
+    --blur-intensity: 20px;
+    --border-opacity: 0.2;
+    --shadow-opacity: 0.15;
+    --text-color: #ffffff;
+    --border-radius: 20px;
+}
+
+/* Thème AMOLED */
+.theme-amoled {
+    --background-color: rgba(0, 0, 0, var(--background-opacity));
+    --accent-color: #00ffff;
+    --border-color: rgba(0, 255, 255, var(--border-opacity));
+}
+
+/* Thème Gold */
+.theme-gold {
+    --background-color: rgba(255, 215, 0, var(--background-opacity));
+    --accent-color: #ffd700;
+    --border-color: rgba(255, 215, 0, var(--border-opacity));
+}
+
+/* Autres thèmes similaires... */

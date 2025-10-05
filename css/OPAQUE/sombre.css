@@ -1,0 +1,30 @@
+:root {
+    --background: #1a1a1a;
+    --text-color: #ffffff;
+    --element-background: #2d2d2d;
+    --border-color: #404040;
+}
+
+@import url('../stylePrincipal.css');
+
+.theme-sombre {
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+/* Copier les styles des boutons depuis stylePrincipal.css */
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+
+.nav-toggle, .theme-toggle {
+    color: var(--text-color);
+    padding: 12px 20px;
+    border-radius: 15px;
+    background: var(--element-background);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}

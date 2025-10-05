@@ -1,0 +1,50 @@
+@import url('../variables.css');
+
+:root {
+    --background-opacity: 0.15;
+    --blur-intensity: 20px;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    --image : url("../../images/imageWindowsLonghorn.jpg") fixed center/cover no-repeat;
+}
+
+/* Hériter des styles de base */
+@import url('../stylePrincipal.css');
+
+/* Surcharger les couleurs spécifiques au thème Glass */
+.theme-glass {
+    --background: rgba(255, 255, 255, 0.1);
+    --element-background: rgba(255, 255, 255, 0.15);
+    --text-color: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Styles spécifiques au thème Glass */
+body.theme-glass {
+    background: var(--background);
+    color:  var(--text-color);
+    background-image: var(--image);
+}
+
+header.theme-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(var(--blur-intensity));
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.element-card.theme-glass,
+.sous-menu.theme-glass {
+    background: var(--element-background);
+    border: var(--glass-border);
+    color: var(--text-color);
+}
+
+.nav-toggle.theme-glass,
+.theme-toggle.theme-glass {
+    background: var(--element-background);
+    color: var(--accent-color);
+    border: var(--glass-border);
+}
+
+/* ...existing code with similar pattern for other elements... */

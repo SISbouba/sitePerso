@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MonSite Moderne</title>
-    <link rel="stylesheet" href="../../css/TRANSLUCENT/stylePrincipal.css">
+    <title>Namdas's Personal Site</title>
+    <link rel="stylesheet" href="../../css/stylePrincipal.css">
+    <!--<link rel="stylesheet" href="../../css/variables.css">-->
     <link rel="icon" href="../../images/siteIcon.ico" type="image/x-icon">
 </head>
 <body>
@@ -27,43 +28,51 @@
     </header>
 
     <!-- Sous-menus -->
-    <div class="sous-menu" id="nav-sous-menu">
-        <ul>
-            <li><a href="../pagePortfolio/portfolio.html">Portfolio</a></li>
-            <li><a href="../pageRessources/ressources.html">Ressources</a></li>
-            <li><a href="#">📧 Contact</a></li>
-        </ul>
-    </div>
-    
-    <section id="theme-contenu" class="mega-menu">
-         <div><h3>Changer de thème</h3></div>
-         <section id="theme-selector">
-            <article class="theme-type">
-                <article>
-                    <h4>OPAQUE</h4>
-                    <div class="theme" onclick="changeTheme('CSS/Glass/glass.css')">Glass</div>
-                    <div class="theme" onclick="changeTheme('CSS/Glass/rose.css')">Rose</div>
-                    <div class="theme" onclick="changeTheme('CSS/Glass/bleu.css')">Bleu</div>
-                    <div class="theme" onclick="changeTheme('CSS/Glass/vert.css')">Vert</div>
-                </article>
-                <article>
-                    <h4>TRANSLUCENT</h4>
-                    <div class="theme" onclick="changeTheme('CSS/Acrylic/acrylic.css')">Acrylic</div>
-                    <div class="theme" onclick="changeTheme('CSS/Acrylic/rose.css')">Rose</div>
-                    <div class="theme" onclick="changeTheme('CSS/Acrylic/bleu.css')">Bleu</div>
-                    <div class="theme" onclick="changeTheme('CSS/Acrylic/vert.css')">Vert</div>
-                </article>
-                <article>
-                    <h4>AMOLED</h4>
-                    <div class="theme" onclick="changeTheme('CSS/AMOLED/AMOLED.css')">AMOLED</div>
-                    <div class="theme" onclick="changeTheme('CSS/AMOLED/violet.css')">Violet</div>
-                    <div class="theme" onclick="changeTheme('CSS/AMOLED/vert.css')">Vert</div>
-                    <div class="theme" onclick="changeTheme('CSS/AMOLED/bleu.css')">Bleu</div>
-                </article>    
-            </article>
-         </section>
+    <section id="nav-sous-menu" class="sous-menu">
+        <div><h4>Navigation</h4></div>
+        <div>
+            <ul>
+                <li><a href="../pagePortfolio/portfolio.html">Portfolio</a></li>
+                <li><a href="../pageBlog/blog.html">Blog</a></li>
+                <li><a href="../pageProjets/projets.html">Mes Projets</a></li>
+                <li><a href="#">📧 Contact</a></li>
+                <li><a href="../pageRessources/ressources.html">Ressources</a></li>
+                <li><a href="../pageGalerie/galerie.html">Galerie</a></li>
+                <li><a href="../pageOutils/outils.html">Outils</a></li>
+            </ul>
+        </div>
     </section>
-    <div class="sous-menu" id="theme-sous-menu">
+
+    <section id="theme-sous-menu" class="sous-menu">
+        <div><h3>Changer de thème</h3></div>
+        <div id="theme-selector">
+            <div class="theme-type">
+                <div>
+                    <h4>OPAQUE</h4>
+                    <button class="theme" onclick="changeTheme('css/OPAQUE/clair.css')">Clair</button>
+                    <button class="theme" onclick="changeTheme('css/OPAQUE/sombre.css')">Sombre</button>
+                    <button class="theme" onclick="changeTheme('css/OPAQUE/capybara.css')">Capybara</button>
+                    <button class="theme" onclick="changeTheme('css/OPAQUE/azure.css')">Azure</button>
+                </div>
+                <div>
+                    <h4>TRANSLUCENT</h4>
+                    <button class="theme" onclick="changeTheme('css/TRANSLUCENT/glass.css')">Glass</button>
+                    <button class="theme" onclick="changeTheme('css/TRANSLUCENT/blur.css')">Blur</button>
+                    <button class="theme" onclick="changeTheme('css/TRANSLUCENT/acrylic.css')">Acrylic</button>
+                    <button class="theme" onclick="changeTheme('css/TRANSLUCENT/transparent.css')">Transparent</button>
+                </div>
+                <div>
+                    <h4>AMOLED</h4>
+                    <button class="theme" onclick="changeTheme('css/AMOLED/AMOLED.css')">AMOLED</button>
+                    <button class="theme" onclick="changeTheme('css/AMOLED/gold.css')">Gold</button>
+                    <button class="theme" onclick="changeTheme('css/AMOLED/galaxy.css')">Galaxy</button>
+                    <button class="theme" onclick="changeTheme('css/AMOLED/crimson.css')">Crimson</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--<div class="sous-menu" id="theme-sous-menu">
         <ul>
             <li><button onclick="toggleBlur()">🔄 Dynamic Blur</button></li>
             <li><button onclick="changeTheme('glass')">✨ Glass</button></li>
@@ -71,9 +80,10 @@
             <li><button onclick="changeTheme('transparent')">👻 Transparent</button></li>
             <li><button onclick="toggleDarkMode()">🌙 Mode sombre</button></li>
         </ul>
-    </div>  
+    </div>-->
+
     <main>
-        <!--<div class="glass-cards">
+        <div class="glass-cards">
             <div class="glass-card">
                 <h2>Bienvenue</h2>
                 <p>Découvrez mon site web moderne avec des effets de glassmorphism et une interface responsive. Explorez mes projets, ressources et n'hésitez pas à me contacter pour vos besoins créatifs.</p>
@@ -82,9 +92,17 @@
                 <h2>Design Moderne</h2>
                 <p>Interface utilisant les dernières tendances en matière de design web : glassmorphism, animations fluides, et expérience utilisateur optimisée pour tous les appareils.</p>
             </div>
+            <div class="glass-card">
+                <h2>Accueil</h2>
+                <p>Ce site permet de référencier tout mes outils que j'utilise et mes projets personnel pour avoir un dashboard complet pour moi (on va dire que c'est un site de vlog personnel). </p>
+            </div>
+            <div class="glass-card">
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
 
-        <div class="apps-section">
+        <!--<div class="apps-section">
             <h2 style="color: white; text-align: center; margin-bottom: 10px;">Applications & Outils</h2>
             <div class="apps-grid">
                 <div class="app-item" onclick="openApp('portfolio')">
@@ -112,7 +130,7 @@
                     <div class="app-name">Outils</div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
         <div class="controls-section">
             <button class="control-btn" onclick="toggleBlur()">🔄 Dynamic Blur</button>
@@ -120,7 +138,7 @@
             <button class="control-btn active" onclick="changeTheme('glass')">✨ Glass</button>
             <button class="control-btn" onclick="changeTheme('transparent')">👻 Transparent</button>
             <button class="control-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
-        </div> --> 
+        </div>
     </main>
 
     <footer>
@@ -132,5 +150,6 @@
     </footer>
 
     <script src="../../javascript/script.js"></script>
+    <script src="../../javascript/themeChanger.js"></script>
 </body>
-</html
+</html>
