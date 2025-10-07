@@ -1,18 +1,124 @@
+:root {
+    --background-color: #000000;
+    --text-color: #FFFFFF;
+    --link-color: #1E90FF;
+    --header-background: #121212;
+    --hover-background: #2b2a2a;
+    --footer-background: #121212;
+    --card-background: #1A1A1A;
+    --button-background: #141414;
+    --button-hover-background: #292929;
+    --border-color: #3a3a3a;
+    --sous-menu-background: #1A1A1A;
+    --sous-menu-hover-background: #333333;
+    --scrollbar-track: #0f0f0f;
+    --scrollbar-thumb: #0f0f0f;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url("../../images/imageWindowsLonghorn.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    /*background-color: black;*/
-    min-height: 100vh;
-    overflow-x: hidden;
-    position: relative; 
+/* Header styles */
+header {
+    background-color: var(--header-background);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header:hover {
+    background: var(--hover-background);
+    transform: translateY(-2px);
+}
+
+
+.logo-name {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.main-menu {
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.main-menu:hover {
+    background-color: var(--hover-background);
+    color: var(--link-color);
+}
+
+/* Clock section */
+.clock-section {
+    background: var(--button-background);
+    border-radius: 15px;
+    border: var(--border-color) 1px solid;
+    padding: 12px 20px;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex: 0 1 auto;
+    min-width: 150px;
+}
+
+.clock-section:hover {
+    background: var(--button-hover-background);
+    transform: translateY(-3px);
+}
+
+.clock {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.date {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+/* Buttons sections */
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+
+/* Content Cards */
+.content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.content-card {
+    background: var(--card-background);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    border: var(--border-color) 1px solid;
+    padding: 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
 }

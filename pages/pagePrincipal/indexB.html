@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonSite Moderne</title>
     <link rel="stylesheet" href="../../css/TRANSLUCENT/stylePrincipal.css">
+    <!--<link rel="stylesheet" href="../../css/AMOLED/AMOLED.css">-->
     <link rel="icon" href="../../images/siteIcon.ico" type="image/x-icon">
 </head>
 <body>
@@ -55,10 +56,10 @@
                 </div>
                 <div>
                     <h4>TRANSLUCENT</h4>
-                    <button class="theme" onclick="changeTheme('css/TRANSLUCENT/glass.css')">Glass</button>
+                    <button class="theme" onclick="changeTheme('css/TRANSLUCENT/content.css')">Glass</button>
                     <button class="theme" onclick="changeTheme('css/TRANSLUCENT/blur.css')">Blur</button>
                     <button class="theme" onclick="changeTheme('css/TRANSLUCENT/acrylic.css')">Acrylic</button>
-                    <button class="theme" onclick="changeTheme('css/TRANSLUCENT/transparent.css')">Transparent</button>
+                    <button class="theme" onclick="changeTheme('css/TRANSLUCENT/vista.css')">Vista</button>
                 </div>
                 <div>
                     <h4>AMOLED</h4>
@@ -71,40 +72,40 @@
         </div>
         <ul>
             <li><button onclick="toggleBlur()">🔄 Dynamic Blur</button></li>
-            <li><button onclick="changeTheme('glass')">✨ Glass</button></li>
+            <li><button onclick="changeTheme('content')">✨ Glass</button></li>
             <li><button onclick="changeTheme('acrylic')">🎭 Acrylic</button></li>
             <li><button onclick="changeTheme('transparent')">👻 Transparent</button></li>
             <li><button onclick="toggleDarkMode()">🌙 Mode sombre</button></li>
         </ul>
     </section>  
     <main>
-        <div class="glass-cards">
-            <div class="glass-card">
+        <div class="content-cards">
+            <div class="content-card">
                 <h2>Bienvenue</h2>
-                <p>Découvrez mon site web moderne avec des effets de glassmorphism et une interface responsive. Explorez mes projets, ressources et n'hésitez pas à me contacter pour vos besoins créatifs.</p>
+                <p>Découvrez mon site web moderne avec des effets de contentmorphism et une interface responsive. Explorez mes projets, ressources et n'hésitez pas à me contacter pour vos besoins créatifs.</p>
             </div>
-            <div class="glass-card">
+            <div class="content-card">
                 <h2>Design Moderne</h2>
-                <p>Interface utilisant les dernières tendances en matière de design web : glassmorphism, animations fluides, et expérience utilisateur optimisée pour tous les appareils.</p>
+                <p>Interface utilisant les dernières tendances en matière de design web : contentmorphism, animations fluides, et expérience utilisateur optimisée pour tous les appareils.</p>
             </div>
-            <div class="glass-card">
+            <div class="content-card">
                 <h2>Accueil</h2>
                 <p>Ce site permet de référencier tout mes outils que j'utilise et mes projets personnel pour avoir un dashboard complet pour moi (on va dire que c'est un site de vlog personnel). </p>
             </div>
-            <div class="glass-card">
+            <div class="content-card">
                 <h2>Lorem Ipsum</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
 
-        <!--<div class="glass-cards">
-            <div class="glass-card">
+        <!--<div class="content-cards">
+            <div class="content-card">
                 <h2>Bienvenue</h2>
-                <p>Découvrez mon site web moderne avec des effets de glassmorphism et une interface responsive. Explorez mes projets, ressources et n'hésitez pas à me contacter pour vos besoins créatifs.</p>
+                <p>Découvrez mon site web moderne avec des effets de contentmorphism et une interface responsive. Explorez mes projets, ressources et n'hésitez pas à me contacter pour vos besoins créatifs.</p>
             </div>
-            <div class="glass-card">
+            <div class="content-card">
                 <h2>Design Moderne</h2>
-                <p>Interface utilisant les dernières tendances en matière de design web : glassmorphism, animations fluides, et expérience utilisateur optimisée pour tous les appareils.</p>
+                <p>Interface utilisant les dernières tendances en matière de design web : contentmorphism, animations fluides, et expérience utilisateur optimisée pour tous les appareils.</p>
             </div>
         </div>
 
@@ -141,7 +142,7 @@
         <div class="controls-section">
             <button class="control-btn" onclick="toggleBlur()">🔄 Dynamic Blur</button>
             <button class="control-btn" onclick="changeTheme('acrylic')">🎭 Acrylic</button>
-            <button class="control-btn active" onclick="changeTheme('glass')">✨ Glass</button>
+            <button class="control-btn active" onclick="changeTheme('content')">✨ content</button>
             <button class="control-btn" onclick="changeTheme('transparent')">👻 Transparent</button>
             <button class="control-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
         </div> --> 
@@ -150,9 +151,12 @@
     <footer>
         <section>
             <h3>Mon répo Github</h3>
-            <a href="https://github.com/SISbouba/sitePerso" target="_blank" itle="Lien vers le repo GitHub"><img src="/images/GitHub.svg" alt="GitHub" id="GitHub" style="height: 100px; width: 100px;"></a>
+            <a href="https://github.com/SISbouba/sitePerso" target="_blank" itle="Lien vers le repo GitHub"><img src="/images/GitHub.svg" alt="GitHub" id="GitHub"></a>
         </section>
-        <p>&copy; 2025 - Mon Site Web Moderne | Design Glassmorphism</p>
+        <section>
+            <h3>Linkedin</h3>
+            <a href="https://www.linkedin.com/in/aboubakar-sise-270b65340/" target="_blank" itle="Lien vers mon profil Linkedin"><img src="/images/linkedin.svg" alt="Linkedin" id="Linkedin"></a>
+        </section>
     </footer>
 
     <script src="../../javascript/script.js"></script>

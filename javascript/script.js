@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Contrôles de thème
 function toggleBlur() {
     blurEnabled = !blurEnabled;
-    const elements = document.querySelectorAll('.glass-card, header, .apps-section, footer, nav a, .control-btn, .app-item');
+    const elements = document.querySelectorAll('.content-card, header, .apps-section, footer, nav a, .control-btn, .app-item');
     elements.forEach(el => {
         if (blurEnabled) {
             el.style.backdropFilter = 'blur(20px)';
@@ -146,36 +146,43 @@ function toggleBlur() {
     showNotification(`Blur ${blurEnabled ? 'activé' : 'désactivé'}`);
 }
 
-function changeTheme(theme) {
-    // Retirer la classe active de tous les boutons
-    document.querySelectorAll('.control-btn').forEach(btn => btn.classList.remove('active'));
-    
-    // Ajouter la classe active au bouton cliqué
-    event.target.classList.add('active');
-
-    const elements = document.querySelectorAll('.glass-card, header, .apps-section, footer');
-    
-    switch(theme) {
-        case 'acrylic':
-            elements.forEach(el => {
-                el.style.background = 'rgba(255, 255, 255, 0.08)';
-                el.style.backdropFilter = 'blur(40px) saturate(200%)';
-            });
-            break;
-        case 'glass':
-            elements.forEach(el => {
-                el.style.background = 'rgba(255, 255, 255, 0.15)';
-                el.style.backdropFilter = 'blur(20px)';
-            });
-            break;
-        case 'transparent':
-            elements.forEach(el => {
-                el.style.background = 'rgba(255, 255, 255, 0.05)';
-                el.style.backdropFilter = 'blur(10px)';
-            });
-            break;
+function changeTheme(themePath) {
+    // Si le thème est un des thèmes de base (content, acrylic, transparent)
+    if (['content', 'acrylic', 'transparent'].includes(themePath)) {
+        const elements = document.querySelectorAll('.content-card, header, .apps-section, footer');
+        
+        switch(themePath) {
+            case 'acrylic':
+                elements.forEach(el => {
+                    el.style.background = 'rgba(255, 255, 255, 0.08)';
+                    el.style.backdropFilter = 'blur(40px) saturate(200%)';
+                });
+                break;
+            case 'content':
+                elements.forEach(el => {
+                    el.style.background = 'rgba(255, 255, 255, 0.15)';
+                    el.style.backdropFilter = 'blur(20px)';
+                });
+                break;
+            case 'transparent':
+                elements.forEach(el => {
+                    el.style.background = 'rgba(255, 255, 255, 0.05)';
+                    el.style.backdropFilter = 'blur(10px)';
+                });
+                break;
+        }
+    } else {
+        // Pour les thèmes CSS externes
+        const styleSheet = document.querySelector('link[rel="stylesheet"]');
+        const basePath = '../../'; // Chemin de base pour remonter au dossier racine
+        styleSheet.href = basePath + themePath;
     }
-    //showNotification(`Thème ${theme} appliqué`);
+
+    // Fermer le menu des thèmes après la sélection
+    const themeMenu = document.getElementById('theme-sous-menu');
+    if (themeMenu) {
+        themeMenu.classList.remove('active');
+    }
 }
 
 function toggleDarkMode() {
@@ -198,7 +205,7 @@ function handleScroll() {
 
 // Parallaxe légère
 function handleMouseMove(e) {
-    const cards = document.querySelectorAll('.glass-card');
+    const cards = document.querySelectorAll('.content-card');
     const x = e.clientX / window.innerWidth;
     const y = e.clientY / window.innerHeight;
 
